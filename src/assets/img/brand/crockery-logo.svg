@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="crockery.svg"
+   inkscape:export-filename="crockery-logo.svg"
+   inkscape:export-xdpi="12.1"
+   inkscape:export-ydpi="12.1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74386223"
+     inkscape:cx="-4.0330049"
+     inkscape:cy="561.93201"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="186.70518"
+       y="395.61011"
+       width="468.59247"
+       height="118.23629"
+       id="rect63" />
+    <rect
+       x="186.70518"
+       y="395.61011"
+       width="468.59247"
+       height="118.23629"
+       id="rect218" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text61"
+       style="white-space:pre;shape-inside:url(#rect63);display:inline;fill:#000000"><tspan
+         x="186.70508"
+         y="470.27601"
+         id="tspan414"><tspan
+           style="font-style:italic;font-weight:bold;font-size:85.3333px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Bold Italic'"
+           id="tspan412">CROCKERY</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,1.3403235,2.6573092)"
+       id="text216"
+       style="white-space:pre;shape-inside:url(#rect218);display:inline;fill:#f2f2f2"><tspan
+         x="186.70508"
+         y="470.27601"
+         id="tspan418"><tspan
+           style="font-style:italic;font-weight:bold;font-size:85.3333px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Bold Italic'"
+           id="tspan416">CROCKERY</tspan></tspan></text>
+  </g>
+</svg>
