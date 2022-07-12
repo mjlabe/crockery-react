@@ -22,8 +22,14 @@
 // Hero sections
 .section-hero {
     @include media-breakpoint-up(md) {
-        min-height: 500px;
+        min-height: 300px;
     }
+}
+
+// Hero sections
+.section-hero-welcome {
+    padding-bottom: 1rem !important;
+    padding-top: 6rem !important;
 }
 
 // Circle sections

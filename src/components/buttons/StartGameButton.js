@@ -1,6 +1,5 @@
 import React from "react";
 import {Button} from "reactstrap";
-import JoinCode from "../JoinCode";
 
 class CreateGameButton extends React.Component {
     // get state and display if game created
@@ -20,7 +19,6 @@ class CreateGameButton extends React.Component {
                         </span>
                         <span className="btn-inner--text">Start Game</span>
                     </Button>{" "}
-                    <JoinCode></JoinCode>
                 </div>
             </>
         );

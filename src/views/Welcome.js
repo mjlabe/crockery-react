@@ -19,8 +19,6 @@ import React from "react";
 
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
-import CreateGameButton from "../components/buttons/CreateGameButton";
-import JoinCode from "../components/JoinCode";
 
 class Hero extends React.Component {
   render() {
@@ -28,7 +26,7 @@ class Hero extends React.Component {
       <>
         <div className="position-relative">
           {/* Hero for FREE version */}
-          <section className="section section-hero section-shaped">
+          <section className="section section-hero section-shaped pb-0 pb-md-3 pb-lg-6">
             {/* Background circles */}
             <div className="shape shape-style-1 shape-default">
               <span className="span-150" />
@@ -42,7 +40,7 @@ class Hero extends React.Component {
               <span className="span-50" />
               <span className="span-100" />
             </div>
-            <Container className="shape-container d-flex align-items-center py-lg">
+            <Container className="shape-container d-flex align-items-center section-hero-welcome">
               <div className="col px-0">
                 <Row className="align-items-center justify-content-center">
                   <Col className="text-center" lg="6" md="6">
@@ -52,10 +50,6 @@ class Hero extends React.Component {
                     <p className="lead text-white">
                       A game where a little white lie wins big and the bigger the crock, the better.
                     </p>
-                    <div className="btn-wrapper mt-5" id="game-state">
-                      <CreateGameButton></CreateGameButton>{" "}
-                      <JoinCode></JoinCode>
-                    </div>
                   </Col>
                 </Row>
               </div>

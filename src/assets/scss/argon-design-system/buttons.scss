@@ -83,7 +83,7 @@
   }
 }
 
-.btn-neutral {
+.btn-theme {
   color: theme-color("primary");
 }
 
@@ -179,3 +179,27 @@ $value in $brand-colors {
         @include button-variant($value, $value);
     }
 }
+
+.btn-theme {
+  color: #fff;
+  background-color: #7a93f5;
+  border-color: #a6aae6;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+.btn-theme:hover {
+  color: #F4F5F7;
+  background-color: #6671e3;
+  border-color: #5e66d3; }
+.btn-theme:focus, .btn-theme.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(222, 222, 223, 0.5); }
+.btn-theme.disabled, .btn-theme:disabled {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff; }
+.btn-theme:not(:disabled):not(.disabled):active, .btn-theme:not(:disabled):not(.disabled).active,
+.show > .btn-theme.dropdown-toggle {
+  color: #212529;
+  background-color: #e6e6e6;
+  border-color: #dfdfdf; }
+.btn-theme:not(:disabled):not(.disabled):active:focus, .btn-theme:not(:disabled):not(.disabled).active:focus,
+.show > .btn-theme.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0 rgba(222, 222, 223, 0.5); }

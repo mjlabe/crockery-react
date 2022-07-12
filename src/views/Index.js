@@ -17,33 +17,30 @@
 */
 import React from "react";
 
-// reactstrap components
-import { Container, Row } from "reactstrap";
-
 // core components
 import NavBar from "components/Navbars/NavBar.js";
-import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
 import Welcome from "./Welcome.js";
-import Buttons from "./IndexSections/Buttons.js";
-import JoinCode from "../components/JoinCode";
-import CustomControls from "./IndexSections/CustomControls.js";
-import Menus from "./IndexSections/Menus.js";
-import Navbars from "./IndexSections/Navbars.js";
-import Tabs from "./IndexSections/Tabs.js";
-import Progress from "./IndexSections/Progress.js";
-import Pagination from "./IndexSections/Pagination.js";
-import Pills from "./IndexSections/Pills.js";
-import Labels from "./IndexSections/Labels.js";
-import Alerts from "./IndexSections/Alerts.js";
-import Typography from "./IndexSections/Typography.js";
-import Modals from "./IndexSections/Modals.js";
-import Datepicker from "./IndexSections/Datepicker.js";
-import TooltipPopover from "./IndexSections/TooltipPopover.js";
-import Carousel from "./IndexSections/Carousel.js";
-import Icons from "./IndexSections/Icons.js";
-import Download from "./IndexSections/Download.js";
+import CreateGame from "../components/CreateGame";
+import StartGame from "../components/StartGame";
+// import Buttons from "./IndexSections/Buttons.js";
+// import CustomControls from "./IndexSections/CustomControls.js";
+// import Menus from "./IndexSections/Menus.js";
+// import Navbars from "./IndexSections/Navbars.js";
+// import Tabs from "./IndexSections/Tabs.js";
+// import Progress from "./IndexSections/Progress.js";
+// import Pagination from "./IndexSections/Pagination.js";
+// import Pills from "./IndexSections/Pills.js";
+// import Labels from "./IndexSections/Labels.js";
+// import Alerts from "./IndexSections/Alerts.js";
+// import Typography from "./IndexSections/Typography.js";
+// import Modals from "./IndexSections/Modals.js";
+// import Datepicker from "./IndexSections/Datepicker.js";
+// import TooltipPopover from "./IndexSections/TooltipPopover.js";
+// import Carousel from "./IndexSections/Carousel.js";
+// import Icons from "./IndexSections/Icons.js";
+// import Download from "./IndexSections/Download.js";
 
 class Index extends React.Component {
   componentDidMount() {
@@ -57,6 +54,8 @@ class Index extends React.Component {
         <NavBar />
         <main ref="main">
           <Welcome />
+            <CreateGame />
+            <StartGame />
         {/*  <Buttons />*/}
         {/*  <section className="section">*/}
         {/*    <Container>*/}
