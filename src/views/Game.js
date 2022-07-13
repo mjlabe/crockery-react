@@ -24,6 +24,23 @@ import NavBar from "components/Navbars/NavBar.js";
 import Welcome from "./Welcome.js";
 import CreateGame from "../components/CreateGame";
 import StartGame from "../components/StartGame";
+// import Buttons from "./IndexSections/Buttons.js";
+// import CustomControls from "./IndexSections/CustomControls.js";
+// import Menus from "./IndexSections/Menus.js";
+// import Navbars from "./IndexSections/Navbars.js";
+// import Tabs from "./IndexSections/Tabs.js";
+// import Progress from "./IndexSections/Progress.js";
+// import Pagination from "./IndexSections/Pagination.js";
+// import Pills from "./IndexSections/Pills.js";
+// import Labels from "./IndexSections/Labels.js";
+// import Alerts from "./IndexSections/Alerts.js";
+// import Typography from "./IndexSections/Typography.js";
+// import Modals from "./IndexSections/Modals.js";
+// import Datepicker from "./IndexSections/Datepicker.js";
+// import TooltipPopover from "./IndexSections/TooltipPopover.js";
+// import Carousel from "./IndexSections/Carousel.js";
+// import Icons from "./IndexSections/Icons.js";
+// import Download from "./IndexSections/Download.js";
 
 class Index extends React.Component {
     componentDidMount() {
@@ -34,83 +51,20 @@ class Index extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            game: "",
-            status: "",
-            join_code: "",
-            round: 0,
+            game: "started",
+            round: 1
         };
     }
 
-    updateGameStatus = gameStatus => {
-        if (gameStatus === "created") {
-            // create game api
-            let response = {"join_code": "HT67G1", "game_id": 12}   //get response
-            if (response) {
-                this.setState({
-                    game: response["game_id"],
-                    status: gameStatus,
-                    join_code: response["join_code"],
-                })
-            }
-        }
-        return this.state
+    updateGameState = gameState => {
+        this.setState({game: gameState})
     };
 
-    createGame() {
-        let response = {"join_code": "HT67G1", "game_id": 12}   //get response
-        if (response) {
-            this.setState({
-                game: response["game_id"],
-                status: "created",
-                join_code: response["join_code"],
-            })
-        }
-    }
-
-    startGame() {
-        let response = {"question": "test q?", "round": 1}   //get response
-        if (response) {
-            this.setState({
-                status: "started",
-                round: response["round"],
-            })
-        }
-    }
-
-    reset() {
-        this.setState({
-            game: "",
-            status: "",
-            join_code: "",
-        })
-    }
-
-    updateState = (key, value) => {
-        switch (key) {
-            case ("status"):
-                switch (value) {
-                    case "created":
-                        console.log("create game")
-                        this.createGame();
-                        break;
-                    case "started":
-                        console.log("start game")
-                        this.startGame();
-                        break;
-                    default:
-                        this.reset();
-                }
-                break;
-
-            default:
-                break;
-        }
-    }
+    updateGameRound = round => {
+        this.setState({round: round})
+    };
 
     render() {
-        console.log("render")
-        console.log(this.state)
-
         return (
             <>
                 <NavBar/>
@@ -131,12 +85,12 @@ class Index extends React.Component {
                                 <span className="span-50" />
                                 <span className="span-100" />
                             </div>
-                            <div className={this.state.status === "" ? "" : "hidden"}>
+                            <div className={this.state.game === "" ? "" : "hidden"}>
                                 <Welcome />
-                                <CreateGame updateState={this.updateState}/>
+                                <CreateGame updateGameState={this.updateGameState}/>
                             </div>
-                            <div className={this.state.status === "created" ? "" : "hidden"}>
-                                <StartGame updateState={this.updateState}/>
+                            <div className={this.state.game === "created" ? "" : "hidden"}>
+                                <StartGame updateGameState={this.updateGameState}/>
                             </div>
                             <div className="separator separator-bottom separator-skew zindex-100">
                                 <svg
@@ -155,7 +109,38 @@ class Index extends React.Component {
                             </div>
                         </section>
                     </div>
+                    {/*  <Buttons />*/}
+                    {/*  <section className="section">*/}
+                    {/*    <Container>*/}
+                    {/*      <CustomControls />*/}
+                    {/*      <Menus />*/}
+                    {/*    </Container>*/}
+                    {/*  </section>*/}
+                    {/*  <Navbars />*/}
+                    {/*  <section className="section section-components">*/}
+                    {/*    <Container>*/}
+                    {/*      <Tabs />*/}
+                    {/*      <Row className="row-grid justify-content-between align-items-center mt-lg">*/}
+                    {/*        <Progress />*/}
+                    {/*        <Pagination />*/}
+                    {/*      </Row>*/}
+                    {/*      <Row className="row-grid justify-content-between">*/}
+                    {/*        <Pills />*/}
+                    {/*        <Labels />*/}
+                    {/*      </Row>*/}
+                    {/*      <Alerts />*/}
+                    {/*      <Typography />*/}
+                    {/*      <Modals />*/}
+                    {/*      <Datepicker />*/}
+                    {/*      <TooltipPopover />*/}
+                    {/*    </Container>*/}
+                    {/*  </section>*/}
+                    {/*  <Carousel />*/}
+                    {/*  <Icons />*/}
+                    {/*  /!*<Login />*!/*/}
+                    {/*  <Download />*/}
                 </main>
+                {/*<CardsFooter />*/}
             </>
         );
     }

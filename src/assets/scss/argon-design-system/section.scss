@@ -21,8 +21,14 @@
 
 // Hero sections
 .section-hero {
-    @include media-breakpoint-up(md) {
-        min-height: 300px;
+    min-height: 400px;
+}
+
+
+// Hero sections
+.section-hero {
+    @include media-breakpoint-up(sm) {
+        min-height: 600px;
     }
 }
 

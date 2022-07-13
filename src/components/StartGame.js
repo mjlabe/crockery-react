@@ -8,12 +8,12 @@ class StartGame extends React.Component {
 
     render() {
         return (
-            <div className="btn-wrapper mt-5" id="game-state">
+            <div className="btn-wrapper mt-3" id="game-state">
                 <div className="col px-0">
                     <Row className="align-items-center justify-content-center">
-                        <Col className="text-center" lg="6" md="6">
-                            <StartGameButton/>{" "}
+                        <Col className="text-center" lg="6">
                             <JoinCode/>
+                            <StartGameButton updateState={this.props.updateState}/>{" "}
                         </Col>
                     </Row>
                 </div>

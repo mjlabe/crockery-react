@@ -30,20 +30,18 @@ class Inputs extends React.Component {
   render() {
     return (
       <>
-        <section className="section pb-0 section-components">
           <Container className="mb-5">
             <Row>
-              <Col lg="6">
-                <p className="text-white text-center font-weight-bolder">
+              <Col>
+                <p className="text-white text-center font-weight-bolder pt-md-5">
                   Send this code to others and they can join the game.
                 </p>
-                <h2 className="border border-light p-3 text-center">
+                <h2 className="text-white border border-light p-3 text-center">
                   H67DB1
                 </h2>
               </Col>
             </Row>
           </Container>
-        </section>
       </>
     );
   }
