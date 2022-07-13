@@ -56,17 +56,30 @@ class Index extends React.Component {
         };
     }
 
+    createGame() {
+        this.setState({game: 'created'})
+        // call api and get code
+    }
+
+
+    startGame() {
+        this.setState({game: 'started'})
+        // call api and start game
+    }
+
     render() {
         return (
             <>
                 <NavBar/>
                 <main ref="main">
-                    <Welcome/>
-                    {this.state.game === "started" ? (
-                        <StartGame {...this} />
-                    ) : (
-                        <CreateGame/>
-                    )}
+                    <Welcome />
+                    <CreateGame props={this}/>
+                    <div
+                        className={this.state.game !== "created" ? "hidden" : ""}
+                        onClick={() => this.startGame()}
+                    >
+                        <StartGame />
+                    </div>
                     {/*  <Buttons />*/}
                     {/*  <section className="section">*/}
                     {/*    <Container>*/}

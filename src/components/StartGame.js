@@ -12,8 +12,8 @@ class StartGame extends React.Component {
                 <div className="col px-0">
                     <Row className="align-items-center justify-content-center">
                         <Col className="text-center" lg="6" md="6">
-                            <StartGameButton />{" "}
-                            <JoinCode />
+                            <StartGameButton/>{" "}
+                            <JoinCode/>
                         </Col>
                     </Row>
                 </div>

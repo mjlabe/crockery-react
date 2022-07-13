@@ -7,19 +7,16 @@ class CreateGameButton extends React.Component {
     render() {
         return (
             <>
-                <div className="btn-wrapper mt-5" id="game-state">
-                    <Button
-                        className="btn-white btn-icon mb-3 mb-sm-0"
-                        color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                    >
+                <Button
+                    className="btn-white btn-icon mb-3 mb-sm-0"
+                    color="default"
+                    size="lg"
+                >
                         <span className="btn-inner--icon mr-1">
                           <i className="ni ni-button-play"/>
                         </span>
-                        <span className="btn-inner--text">Start Game</span>
-                    </Button>{" "}
-                </div>
+                    <span className="btn-inner--text">Start Game</span>
+                </Button>{" "}
             </>
         );
     }

@@ -10,8 +10,8 @@ class CreateGame extends React.Component {
             <div className="btn-wrapper mt-5" id="game-state">
                 <div className="col px-0">
                     <Row className="align-items-center justify-content-center">
-                        <Col className="text-center" lg="6" md="6">
-                            <CreateGameButton />{" "}
+                        <Col className="text-center col-auto">
+                            <CreateGameButton/>{" "}
                         </Col>
                     </Row>
                 </div>
