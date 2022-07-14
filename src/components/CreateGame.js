@@ -11,7 +11,7 @@ class CreateGame extends React.Component {
                 <div className="col px-0">
                     <Row className="align-items-center justify-content-center">
                         <Col className="text-center col-auto">
-                            <CreateGameButton updateState={this.props.updateState}/>{" "}
+                            <CreateGameButton onClick={this.props.onClick}/>{" "}
                         </Col>
                     </Row>
                 </div>

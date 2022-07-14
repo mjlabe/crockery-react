@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useState} from 'react';
 
 // core components
 import NavBar from "components/Navbars/NavBar.js";
@@ -25,92 +25,29 @@ import Welcome from "./Welcome.js";
 import CreateGame from "../components/CreateGame";
 import StartGame from "../components/StartGame";
 
-class Index extends React.Component {
-    componentDidMount() {
-        document.documentElement.scrollTop = 0;
-        document.scrollingElement.scrollTop = 0;
-    }
 
-    constructor(props, context) {
-        super(props, context);
+class Index extends React.Component {
+    constructor(props) {
+        super(props);
         this.state = {
             game: "",
-            status: "",
-            join_code: "",
             round: 0,
         };
     }
 
-    updateGameStatus = gameStatus => {
-        if (gameStatus === "created") {
-            // create game api
-            let response = {"join_code": "HT67G1", "game_id": 12}   //get response
-            if (response) {
-                this.setState({
-                    game: response["game_id"],
-                    status: gameStatus,
-                    join_code: response["join_code"],
-                })
-            }
-        }
-        return this.state
-    };
-
     createGame() {
-        let response = {"join_code": "HT67G1", "game_id": 12}   //get response
-        if (response) {
-            this.setState({
-                game: response["game_id"],
-                status: "created",
-                join_code: response["join_code"],
-            })
-        }
+        // api call
+        this.setState({game: "kjnwdf"})
     }
 
     startGame() {
-        let response = {"question": "test q?", "round": 1}   //get response
-        if (response) {
-            this.setState({
-                status: "started",
-                round: response["round"],
-            })
-        }
+        // api call
+        this.setState({round: 1})
     }
 
-    reset() {
-        this.setState({
-            game: "",
-            status: "",
-            join_code: "",
-        })
-    }
 
-    updateState = (key, value) => {
-        switch (key) {
-            case ("status"):
-                switch (value) {
-                    case "created":
-                        console.log("create game")
-                        this.createGame();
-                        break;
-                    case "started":
-                        console.log("start game")
-                        this.startGame();
-                        break;
-                    default:
-                        this.reset();
-                }
-                break;
-
-            default:
-                break;
-        }
-    }
 
     render() {
-        console.log("render")
-        console.log(this.state)
-
         return (
             <>
                 <NavBar/>
@@ -120,23 +57,23 @@ class Index extends React.Component {
                         <section className="section section-hero section-shaped pb-0 pb-md-3 pb-lg-6">
                             {/* Background circles */}
                             <div className="shape shape-style-1 shape-default">
-                                <span className="span-150" />
-                                <span className="span-50" />
-                                <span className="span-50" />
-                                <span className="span-75" />
-                                <span className="span-100" />
-                                <span className="span-75" />
-                                <span className="span-50" />
-                                <span className="span-100" />
-                                <span className="span-50" />
-                                <span className="span-100" />
+                                <span className="span-150"/>
+                                <span className="span-50"/>
+                                <span className="span-50"/>
+                                <span className="span-75"/>
+                                <span className="span-100"/>
+                                <span className="span-75"/>
+                                <span className="span-50"/>
+                                <span className="span-100"/>
+                                <span className="span-50"/>
+                                <span className="span-100"/>
                             </div>
-                            <div className={this.state.status === "" ? "" : "hidden"}>
-                                <Welcome />
-                                <CreateGame updateState={this.updateState}/>
+                            <div className={this.state.game === "" ? "" : "hidden"}>
+                                <Welcome/>
+                                <CreateGame onClick={() => this.createGame()}/>
                             </div>
-                            <div className={this.state.status === "created" ? "" : "hidden"}>
-                                <StartGame updateState={this.updateState}/>
+                            <div className={this.state.game !== "" ? "" : "hidden"}>
+                                <StartGame onClick={() => this.startGame()}/>
                             </div>
                             <div className="separator separator-bottom separator-skew zindex-100">
                                 <svg

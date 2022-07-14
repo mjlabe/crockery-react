@@ -13,7 +13,7 @@ class StartGame extends React.Component {
                     <Row className="align-items-center justify-content-center">
                         <Col className="text-center" lg="6">
                             <JoinCode/>
-                            <StartGameButton updateState={this.props.updateState}/>{" "}
+                            <StartGameButton onClick={this.props.onClick} />{" "}
                         </Col>
                     </Row>
                 </div>
@@ -21,5 +21,6 @@ class StartGame extends React.Component {
         )
     }
 }
+
 
 export default StartGame;

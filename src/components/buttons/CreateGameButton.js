@@ -10,7 +10,7 @@ class CreateGameButton extends React.Component {
                 <Button
                     className="btn-theme btn-icon mb-3 mb-sm-0"
                     size="lg"
-                    onClick={() => this.props.updateState("status", "created")}
+                    onClick={this.props.onClick}
                 >
                         <span className="btn-inner--icon mr-1">
                           <i className="fa fa-plus"/>
