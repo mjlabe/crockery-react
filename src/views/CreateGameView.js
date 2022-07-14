@@ -15,12 +15,19 @@ class CreateGameView extends React.Component {
         this.state = {
             game: "",
             round: 0,
+            joinCode: "",
         };
     }
 
     createGame = () => {
         // get game join code from api
-        this.setState({game: "created"})
+        let code = "88ef87f"
+        this.setState({game: "created", joinCode: code})
+    }
+
+    startGame = () => {
+        // get question from api
+        this.props.setGameData({game: "started", round: 1, joinCode: this.state.joinCode})
     }
 
     render() {
@@ -32,7 +39,7 @@ class CreateGameView extends React.Component {
                             <Col className="text-center" lg="6">
                                 {(this.state.game === "" ?
                                     <WelcomeComponent/> :
-                                    <JoinCodeComponent/>)}
+                                    <JoinCodeComponent joinCode={this.state.joinCode}/>)}
                             </Col>
                         </Row>
                     </div>
@@ -43,7 +50,7 @@ class CreateGameView extends React.Component {
                             <Col className="text-center">
                                 {(this.state.game === "" ?
                                     <CreateGameButtonComponent onClick={this.createGame}/> :
-                                    <StartGameButtonComponent onClick={this.props.startGame}/>)}
+                                    <StartGameButtonComponent onClick={this.startGame}/>)}
                             </Col>
                         </Row>
                     </div>

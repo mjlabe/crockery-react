@@ -38,36 +38,29 @@ import React from "react";
 // import Icons from "./IndexSections/Icons.js";
 // import Download from "./IndexSections/Download.js";
 
-class Index extends React.Component {
+class PlayGameView extends React.Component {
     componentDidMount() {
         document.documentElement.scrollTop = 0;
         document.scrollingElement.scrollTop = 0;
     }
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            game: "started",
-            round: 1
-        };
-    }
-
-    updateGameState = gameState => {
-        this.setState({game: gameState})
-    };
-
-    updateGameRound = round => {
-        this.setState({round: round})
-    };
+    //
+    // constructor(props, context) {
+    //     super(props, context);
+    //     this.state = {
+    //         game: "started",
+    //         round: 1,
+    //         joinCode: "",
+    //     };
+    // }
 
     render() {
         return (
             <>
-                <h1>HI</h1>
+                <h1>{this.props.state.joinCode}</h1>
 
             </>
         );
     }
 }
 
-export default Index;
+export default PlayGameView;

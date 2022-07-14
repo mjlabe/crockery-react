@@ -13,12 +13,14 @@ class Index extends React.Component {
         this.state = {
             game: "",
             round: 0,
+            joinCode: "",
+            winner: "",
+            score: ""
         };
     }
 
-    startGame = () => {
-        // get question from api
-        this.setState({game: "started", round: 1})
+    setGameData = (gameState) => {
+        this.setState(gameState)
     }
 
     render() {
@@ -45,8 +47,8 @@ class Index extends React.Component {
                                 <span className="span-100"/>
                             </div>
                             {(this.state.game === "started" ?
-                                <PlayGameView onClick={this.createGame}/> :
-                                <CreateGameView startGame={this.startGame}/>)}
+                                <PlayGameView state={this.state}/> :
+                                <CreateGameView setGameData={this.setGameData}/>)}
                             <div className="separator separator-bottom separator-skew zindex-100">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
