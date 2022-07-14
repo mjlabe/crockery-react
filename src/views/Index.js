@@ -1,30 +1,11 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, {useState} from 'react';
+import React from 'react';
 
 // core components
 import NavBar from "components/Navbars/NavBar.js";
 
 // index page sections
-import Welcome from "./Welcome.js";
-import CreateGame from "../components/CreateGame";
-import StartGame from "../components/StartGame";
-
+import CreateGameView from "./CreateGameView";
+import PlayGameView from "./PlayGameView";
 
 class Index extends React.Component {
     constructor(props) {
@@ -35,19 +16,14 @@ class Index extends React.Component {
         };
     }
 
-    createGame() {
-        // api call
-        this.setState({game: "kjnwdf"})
+    startGame = () => {
+        // get question from api
+        this.setState({game: "started", round: 1})
     }
-
-    startGame() {
-        // api call
-        this.setState({round: 1})
-    }
-
-
 
     render() {
+        console.log(this.state)
+
         return (
             <>
                 <NavBar/>
@@ -68,13 +44,9 @@ class Index extends React.Component {
                                 <span className="span-50"/>
                                 <span className="span-100"/>
                             </div>
-                            <div className={this.state.game === "" ? "" : "hidden"}>
-                                <Welcome/>
-                                <CreateGame onClick={() => this.createGame()}/>
-                            </div>
-                            <div className={this.state.game !== "" ? "" : "hidden"}>
-                                <StartGame onClick={() => this.startGame()}/>
-                            </div>
+                            {(this.state.game === "started" ?
+                                <PlayGameView onClick={this.createGame}/> :
+                                <CreateGameView startGame={this.startGame}/>)}
                             <div className="separator separator-bottom separator-skew zindex-100">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

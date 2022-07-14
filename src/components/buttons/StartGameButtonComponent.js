@@ -1,7 +1,7 @@
 import React from "react";
 import {Button} from "reactstrap";
 
-class StartGameButton extends React.Component {
+class StartGameButtonComponent extends React.Component {
     // get state and display if game created
 
     render() {
@@ -24,4 +24,4 @@ class StartGameButton extends React.Component {
 }
 
 
-export default StartGameButton;
+export default StartGameButtonComponent;

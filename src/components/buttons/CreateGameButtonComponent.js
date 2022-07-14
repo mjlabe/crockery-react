@@ -1,7 +1,7 @@
 import React from "react";
 import {Button} from "reactstrap";
 
-class CreateGameButton extends React.Component {
+class CreateGameButtonComponent extends React.Component {
     // get state and hide if game created
 
     render() {
@@ -22,4 +22,4 @@ class CreateGameButton extends React.Component {
     }
 }
 
-export default CreateGameButton;
+export default CreateGameButtonComponent;
